@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Viajou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <img src="/img/logo/Viajou.png" alt="viajou" class="logo">
+        <img src="/img/logo/aviaozin.png" alt="aviaozinho" class="aviaozinho">
+        
+        <form action="/html/home/index.html" method="GET" onsubmit="return redirecionar(event)">
+            <div class="form-input">
+                <img src="/img/icones/account.png" alt="account-icon" class="input-icon">
+                <input type="email" placeholder="Email ou username" required>
+            </div>
+            <div class="form-input">
+                <img src="/img/icones/lock.png" alt="lock-icon" class="input-icon">
+                <input type="password" placeholder="Senha" required>
+            </div>
+            <div class="stay-connected">
+                <label>
+                    <input type="checkbox"> Mantenha conectado
+                </label>
+                <a href="#" class="forgot-password">Esqueceu sua senha?</a>
+            </div>
+            <button type="submit" class="login-button">Entrar</button>
+            <div class="social-login">
+                <img src="/img/icones/google-icon.png" alt="Google" class="social-icon">
+                <img src="/img/icones/facebook-icon.png" alt="Facebook" class="social-icon">
+                <img src="/img/icones/apple-icon.png" alt="Apple" class="social-icon">
+            </div>
+        </form>
+    </div>
+    <script>
+        function redirecionar(event) {
+            event.preventDefault();  // Previne o envio padrão do formulário
+
+            // Adicione a lógica de validação ou manipulação dos dados do formulário aqui, se necessário
+
+            // Redireciona para a próxima página
+            window.location.href = "/html/home/index.html";
+
+            return false;  // Previne o envio do formulário
+        }
+    </script>
+</body>
+</html>
